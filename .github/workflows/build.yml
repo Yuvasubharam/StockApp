@@ -8,6 +8,11 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
+      - name: Use Node.js 20
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+
       - uses: actions/checkout@v2
 
       #used to cache dependencies with a timeout
